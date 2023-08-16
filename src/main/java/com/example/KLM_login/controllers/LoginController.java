@@ -28,8 +28,18 @@ public class LoginController {
 
     @RequestMapping("/")
     public String index(){
+
+        String username = "admin";
+
+        User existingUser = this.userRepository.findByUsername(username);
+        if (existingUser == null) {
+            String checkIn = "INSERT INTO user(password, username) VALUES ('admin', 'admin')";
+            jdbcTemplate.execute(checkIn);
+        }
+
         String sql = "UPDATE user SET password = ? WHERE username = ?";
         jdbcTemplate.update(sql, "admin", "admin");
+
         return "index";
     }
 
