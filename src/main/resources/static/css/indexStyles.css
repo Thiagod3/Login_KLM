@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: #f2f2f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid (#F2F2F2);
+    border-radius: 10px;
+    height: 50rem;
+    width: 80rem;
+    margin: 5rem;
+    -webkit-box-shadow: 0px 0px 42px -7px rgba(0,0,0,0.66);
+    -moz-box-shadow: 0px 0px 42px -7px rgba(0,0,0,0.66);
+    box-shadow: 0px 0px 42px -7px rgba(0,0,0,0.66);
+}
+
+.Container-esq{
+    height: 100%;
+    width: 50%;
+    background-color: #D9D9D9;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px 0 0 10px;
+    gap: 5rem;
+}
+
+.Container-esq img{
+    width: 25rem;
+}
+
+.Login-pad{
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.Login-pad input{
+    width: 75%;
+    height: 5rem;
+    border: 1px solid var(#F2F2F2);
+    border-radius: 8px;
+    padding-left:1rem;
+    font-size: 1.5rem;
+}
+
+.Login-pad button{
+    width: 75%;
+    height: 6rem;
+    background-color: #007193;
+    border: none;
+    border-radius: 8px;
+    color: #F2F2F2;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+.Login-pad button:hover{
+    background-color: #00A09A;
+}
+
+.Container-dir{
+    height: 100%;
+    width: 50%;
+    border-radius: 0 10px 10px 0;
+    background: rgb(0,113,147);
+    background: linear-gradient(90deg, rgba(0,113,147,1) 0%, rgba(0,160,154,1) 100%);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.Container-dir strong{
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    color: #F2F2F2;
+    font-size: 3rem;
+}
+
+@media (max-width: 800px){
+    .Container{
+        flex-direction: column;
+    }
+    .Container-esq{
+        width:100%;
+        border-radius: 10px 10px 0 0;
+    }
+    .Container-dir{
+        width:100%;
+        border-radius: 0 0 10px 10px;
+    }
+}
