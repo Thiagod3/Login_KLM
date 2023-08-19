@@ -43,18 +43,23 @@ public class LoginController {
         return "index";
     }
 
-@PostMapping("/login")
-public String login(@RequestParam String username, @RequestParam String password, Model model) {
+@PostMapping("/LKM")
+public String LKM(@RequestParam String username, @RequestParam String password, Model model) {
     User user = this.userRepository.findByUsernameAndPassword(username, password);
 
     if(user == null){
         return "index";
     }
-    return "home";
+    return "apiTest";
     }
 
 @PostMapping("/changePassword")
-public String changePassword(@RequestParam String newPassword, @RequestParam String newPasswordCheck, Model model){
+public String changePassword(){
+        return "home";
+}
+
+@PostMapping("/reSignIn")
+public String reSignIn(@RequestParam String newPassword, @RequestParam String newPasswordCheck, Model model){
         if (!Objects.equals(newPassword, newPasswordCheck)){
             return "wrong";
         }
