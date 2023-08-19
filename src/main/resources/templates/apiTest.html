@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <link rel="icon" href="../static/LKM-logo.png"/>
+    <link rel="stylesheet" href="../static/css/tempStyles.css">
+</head>
+<body>
+    <header>
+        <img class="Logo" src="../static/LKM-logo.png" alt="LKM"/>
+    </header>
+
+        <div class="Container">
+            <div class="URL">
+                <p>URL *</p>
+                <div class="URLBar">
+                    <select>
+                        <option value="GET">GET</option>
+                        <option value="POST">POST</option>
+                        <option value="PUT">PUT</option>
+                        <option value="DELETE">DELETE</option>
+                        <option value="PATCH">PATCH</option>
+                        <option value="HEAD">HEAD</option>
+                        <option value="OPTIONS">OPTIONS</option>
+                    </select>
+                    <input value="https://"/>
+                    <button>Send</button>
+                </div>
+            </div>
+
+            <div class="TestOpt">
+                <label>
+                    Name *
+                    <input placeholder="Give your test a name"/>
+                </label>
+                <label>
+                    <span>Environment (<strong>env</strong>)</span>
+                    <input placeholder="Add env tags"/>
+                </label>
+                <label>
+                    Additional Tags
+                    <input placeholder="Add related tags"/>
+                </label>
+            </div>
+
+                <div class="RequestOptions">
+                    <strong>Request Options</strong>
+                    <div class="HttpVersion">
+                        <p>HTTP Version</p>
+                        <select>
+                            <option value="HTTP2/1.1">HTTP/2 fallback to HTTP/1.1</option>
+                            <option value="HTTP1.1">HTTP/1.1 only</option>
+                            <option value="HTTP2">HTTP/2 only</option>
+                        </select>
+                    </div>
+                    <br>
+                    <label class="Check">
+                        <input type="checkbox"/>
+                        Follow redirects
+                    </label>
+                    <br>
+                    <label class="Check">
+                        <input type="checkbox"/>
+                        Ignore server certificate error
+                    </label>
+                    <br>
+                    <label class="TimeOut">
+                        Time out after
+                        <input placeholder="60"/>
+                        seconds
+                    </label>
+                    <br>
+                        <p>Request Headers</p>
+                        <label class="NameValue">
+                            <input class="NameField" placeholder="Name"/>
+                            <input class="ValueField" placeholder="Value"/>
+                            <img src="../static/icons/plus-circle-fill.svg">
+                            <img id="trash" src="../static/icons/trash-fill.svg">
+                        </label>
+                    <br>
+                    <label class="Cookies">
+                        Cookies
+                        <input placeholder="Add cookies..."/>
+                    </label>
+                </div>
+
+                <div class="Authentication">
+                    <strong>Authentication</strong>
+                    <p>Client Certificate</p>
+                    <label>
+                        Private Key
+                        <button>
+                            <img src="../static/icons/cloud-arrow-up-bold.svg">
+                            Upload File
+                        </button>
+                    </label>
+                    <label>
+                        Certificate
+                        <button>
+                            <img src="../static/icons/cloud-arrow-up-bold.svg">
+                            Upload File
+                        </button>
+                    </label>
+                </div>
+
+                <div class="QueryParams">
+                    <strong>Query Params</strong>
+                    <p>Parameters to encode</p>
+                    <p id="qpInfo">
+                        Add all parameters that require encoding to the below fields. Query parameters that do not require encoding should be added to the URL field directly.
+                    </p>
+                    <label class="NameValue">
+                        <input class="NameField" placeholder="Name"/>
+                        <input class="ValueField" placeholder="Value"/>
+                        <img src="../static/icons/plus-circle-fill.svg">
+                        <img class="Trash" src="../static/icons/trash-fill.svg">
+                    </label>
+                </div>
+
+                <div class="RequestBody">
+                    <strong>Request Body</strong>
+                    <label>
+                    Body Type
+                    <select>
+                        <option value="None">None</option>
+                        <option value="GraphQL">GraphQL</option>
+                        <option value="application/x-www-form-urlencoded">application/x-www-form-urlencoded</option>
+                        <option value="text/html">text/html</option>
+                        <option value="text/xml">text/xml</option>
+                        <option value="application/json">application/json</option>
+                        <option value="text/plain">text/plain</option>
+                    </select>
+                    </label>
+                    <label>
+                        Request Body
+                        <textarea cols="90" rows="4"></textarea>
+                    </label>
+                </div>
+
+                <div class="Proxy">
+                    <strong>Proxy</strong>
+                    <label>
+                        Proxy URL
+                        <input placeholder="URL"/>
+                    </label>
+                    <p>Proxy Header</p>
+                    <label class="NameValue">
+                        <input class="NameField" placeholder="Name"/>
+                        <input class="ValueField" placeholder="Value"/>
+                        <img src="../static/icons/plus-circle-fill.svg">
+                        <img class="Trash" src="../static/icons/trash-fill.svg">
+                    </label>
+                </div>
+
+                <div class="Privacy">
+                    <strong>Privacy</strong>
+                    <label class="Check">
+                        <input type="checkbox"/>
+                        Do not save response body
+                    </label>
+                </div>
+        </div>
+</body>
+</html>
