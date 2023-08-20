@@ -5,6 +5,7 @@
     <title>Home Page</title>
     <link rel="icon" href="LKM-logo.png"/>
     <link rel="stylesheet" href="/css/apiTestStyles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <header>
@@ -15,7 +16,23 @@
     </header>
 
         <div class="Container">
-            <div class="URL">
+                <div class="Authentication">
+                <strong>Authentication</strong>
+                <p>Client Certificate</p>
+                <label>
+                    Certificate
+                    <form action="/apiTest" method="post" enctype="multipart/form-data" class="uploadForm">
+                        <input type="file" id="Certificate" name="file" onchange="submitForm()">
+                    </form>
+                </label>
+                <script>
+                    function submitForm() {
+                      document.querySelector('.uploadForm').submit();
+                    }
+                </script>
+            </div>
+
+                <div class="URL">
                 <p>URL *</p>
                 <div class="URLBar">
                     <select>
@@ -28,11 +45,11 @@
                         <option value="OPTIONS">OPTIONS</option>
                     </select>
                     <input value="https://"/>
-                    <button>Send</button>
+                    <button id="sendBttn">Send</button>
                 </div>
             </div>
 
-            <div class="TestOpt">
+                <div class="TestOpt">
                 <label>
                     Name *
                     <input placeholder="Give your test a name"/>
@@ -85,25 +102,6 @@
                     <label class="Cookies">
                         Cookies
                         <input placeholder="Add cookies..."/>
-                    </label>
-                </div>
-
-                <div class="Authentication">
-                    <strong>Authentication</strong>
-                    <p>Client Certificate</p>
-                    <label>
-                        Private Key
-                        <button>
-                            <img src="/icons/cloud-arrow-up-bold.svg">
-                            Upload File
-                        </button>
-                    </label>
-                    <label>
-                        Certificate
-                        <button>
-                            <img src="/icons/cloud-arrow-up-bold.svg">
-                            Upload File
-                        </button>
                     </label>
                 </div>
 
@@ -163,6 +161,18 @@
                         Do not save response body
                     </label>
                 </div>
+
+<!--                <script>-->
+<!--                    const myForm = $("#form");-->
+<!--                    const submitButton = $("#sendBttn");-->
+
+<!--                    submitButton.click(function() {-->
+<!--                      if(myForm.find("input[type=file]").val() !== "") {-->
+<!--                        myForm.submit();-->
+<!--                      }-->
+<!--                    });-->
+
+<!--                </script>-->
         </div>
 </body>
 </html>

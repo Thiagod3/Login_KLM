@@ -85,6 +85,7 @@ header button{
 }
 .URLBar select{
     width:10%;
+    cursor: pointer;
 }
 
 .URLBar input{
@@ -97,9 +98,11 @@ header button{
     background-color: #007193;
     color: #F2F2F2;
     border-radius: 3px;
+    cursor: pointer;
 }
 .URLBar button:hover{
     background-color: #00A09A;
+    cursor: pointer;
 }
 
 /* Info do teste*/
@@ -130,12 +133,14 @@ header button{
 
 .HttpVersion select{
     width: 100%;
+    cursor: pointer;
 }
 
 .Check{
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    cursor: pointer;
 }
 
 .TimeOut input{
@@ -189,23 +194,23 @@ header button{
     align-items: start;
     justify-content: center;
     width: 100%;
-    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
     gap: 0.5rem;
+    border-bottom: 0.75rem solid #007193;
+    border-radius: 3px;
 }
 
-.Authentication label{
-    width: 100%;
+.uploadForm {
+  display: inline-block;
+  border-radius: 3px;
+  padding: 10px;
 }
 
-.Authentication button{
-    height: 1.5rem;
-    padding: 0.25rem;
-    font-size: 0.75rem;
-    cursor: pointer;
-}
-
-.Authentication img{
-    height: 0.75rem;
+.uploadForm input[type="file"] {
+  border: none;
+  background: none;
+  padding: 5px 10px;
+  border-radius: 3px;
 }
 
 /* Query */
@@ -239,6 +244,11 @@ header button{
     display:flex;
     flex-direction: column;
     margin-bottom: 0.75rem;
+    cursor: pointer;
+}
+
+.RequestBody select{
+    cursor: pointer;
 }
 
 .RequestBody form{

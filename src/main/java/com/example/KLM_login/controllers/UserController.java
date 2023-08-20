@@ -9,16 +9,15 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 
-import java.util.Map;
 import java.util.Objects;
 
 @Controller
-public class LoginController {
+public class UserController {
 
     private final UserRepository userRepository;
 
     @Autowired
-    public LoginController(UserRepository userRepository){
+    public UserController(UserRepository userRepository){
         this.userRepository= userRepository;
     }
 
