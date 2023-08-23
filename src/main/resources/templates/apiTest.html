@@ -21,8 +21,10 @@
                 <p>Client Certificate</p>
                 <label>
                     Certificate
+
                     <form action="/apiTest" method="post" enctype="multipart/form-data" class="uploadForm">
-                        <input type="file" id="Certificate" name="file" onchange="submitForm()">
+                        <input type="file" id="files" class="hidden" name="file" onchange="submitForm()"/>
+                        <label class="selectFile" for="files">Select file</label>
                     </form>
                 </label>
                 <script>
@@ -161,18 +163,6 @@
                         Do not save response body
                     </label>
                 </div>
-
-<!--                <script>-->
-<!--                    const myForm = $("#form");-->
-<!--                    const submitButton = $("#sendBttn");-->
-
-<!--                    submitButton.click(function() {-->
-<!--                      if(myForm.find("input[type=file]").val() !== "") {-->
-<!--                        myForm.submit();-->
-<!--                      }-->
-<!--                    });-->
-
-<!--                </script>-->
         </div>
 </body>
 </html>

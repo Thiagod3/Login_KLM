@@ -36,9 +36,6 @@ public class UserController {
             jdbcTemplate.execute(checkIn);
         }
 
-        String sql = "UPDATE user SET password = ? WHERE username = ?";
-        jdbcTemplate.update(sql, "admin", "admin");
-
         return "index";
     }
 

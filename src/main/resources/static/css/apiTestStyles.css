@@ -198,6 +198,7 @@ header button{
     gap: 0.5rem;
     border-bottom: 0.75rem solid #007193;
     border-radius: 3px;
+    padding-bottom:1rem;
 }
 
 .uploadForm {
@@ -213,6 +214,16 @@ header button{
   border-radius: 3px;
 }
 
+.hidden{
+    display: none;
+}
+
+.selectFile{
+    border-radius: 3px;
+    background: #007193;
+    padding: 2px;
+    color: #F2F2F2;
+}
 /* Query */
 
 .QueryParams{
